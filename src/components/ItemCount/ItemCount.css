@@ -1,0 +1,29 @@
+.container-count-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+.container-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.count {
+  margin: 1.5rem;
+}
+
+.btn-count {
+  width: 2rem;
+  height: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-carrito {
+  width: 15rem;
+  height: 3rem;
+  font-weight: bold;
+}
