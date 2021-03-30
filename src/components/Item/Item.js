@@ -6,6 +6,7 @@ const Item = ({ item }) => {
       <img src={item.url} alt={item.title} className="img-clothing" />
       <h4>{item.title}</h4>
       <h5>{item.price}</h5>
+      <h5>{item.category}</h5>
     </div>
   );
 };
