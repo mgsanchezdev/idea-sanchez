@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Loading from '../Loading/Loading';
-import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css';
 
@@ -95,7 +94,6 @@ const ItemListContainer = ({ greeting }) => {
 
       <div className="container-title">
         <ItemList items={items} />
-        <ItemCount stock="10" initial="3" />
       </div>
     </>
   );
