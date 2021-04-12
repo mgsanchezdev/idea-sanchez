@@ -1,0 +1,15 @@
+.container-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.container-clothing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.img-clothing {
+  width: 10rem;
+  height: 10rem;
+}
