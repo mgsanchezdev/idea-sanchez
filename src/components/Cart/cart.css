@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 100vw;
 }
 .container-clothing {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -12,4 +13,15 @@
 .img-clothing {
   width: 10rem;
   height: 10rem;
+}
+
+.messageCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartTotalPrice {
+  margin-top: 2rem;
 }

@@ -27,7 +27,8 @@ const CartProvider = ({ children }) => {
   };
 
   const removeItem = (itemId) => {
-    const newCart = cart.filter((element) => element.product !== itemId);
+    const newCart = cart.filter((element) => element.product.id !== itemId);
+
     setCart(newCart);
   };
 
@@ -40,9 +41,29 @@ const CartProvider = ({ children }) => {
     return findItem ? true : false;
   };
 
+  const cartTotalItem = () => {
+    return cart.reduce((acumulador, item) => {
+      return acumulador + item.quantityProduct;
+    }, 0);
+  };
+
+  const cartTotalPrice = () => {
+    return cart.reduce((acumulador, item) => {
+      return acumulador + item.quantityProduct * item.product.price;
+    }, 0);
+  };
+
   return (
     <CartContext.Provider
-      value={{ cart, addItem, removeItem, clear, isInCart }}
+      value={{
+        cart,
+        addItem,
+        removeItem,
+        clear,
+        isInCart,
+        cartTotalItem,
+        cartTotalPrice,
+      }}
     >
       {children}
     </CartContext.Provider>
