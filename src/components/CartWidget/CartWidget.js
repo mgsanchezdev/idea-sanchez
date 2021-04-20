@@ -8,16 +8,14 @@ const CartWidget = () => {
   const { cartTotalItem } = useContext(CartContext);
 
   return (
-    <>
+    <div className="containerCart">
+      <Link to="/cart">
+        <BiCart className="iconCart containerCart" />{' '}
+      </Link>
       {cartTotalItem() !== 0 && (
-        <div className="containerCart">
-          <Link to="/cart">
-            <BiCart className="iconCart" />{' '}
-          </Link>
-          <div className="CantCart">{cartTotalItem()}</div>
-        </div>
+        <div className="CantCart">{cartTotalItem()}</div>
       )}{' '}
-    </>
+    </div>
   );
 };
 

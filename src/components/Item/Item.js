@@ -3,10 +3,10 @@ import './Item.css';
 const Item = ({ item }) => {
   return (
     <div className="container-item">
-      <img src={item.url} alt={item.title} className="img-clothing" />
-      <h4>{item.title}</h4>
-      <h5>{item.price}</h5>
-      <h5>{item.category}</h5>
+      <img src={item[0].url} alt={item[0].title} className="img-clothing" />
+      <h4>{item[0].title}</h4>
+      <h5>{item[0].price}</h5>
+      <h5>{item[0].category}</h5>
     </div>
   );
 };

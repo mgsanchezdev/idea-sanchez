@@ -15,6 +15,7 @@ const Cart = () => {
   const deleteCart = () => {
     clear();
   };
+
   return (
     <>
       {' '}
@@ -32,19 +33,19 @@ const Cart = () => {
           <div className="container-clothing">
             {cart.map((item) => {
               return (
-                <div key={item.product.id}>
+                <div key={item.product[0].id}>
                   {' '}
-                  <h2>{item.product.title}</h2>
+                  <h2>{item.product[0].title}</h2>
                   <img
                     className="img-clothing"
-                    src={item.product.url}
-                    alt={item.product.title}
+                    src={item.product[0].url}
+                    alt={item.product[0].title}
                   />
                   <h2>Cantidad {item.quantityProduct}</h2>
                   <Button
                     variant="danger"
                     onClick={() => {
-                      deleteItem(item.product.id);
+                      deleteItem(item.product[0].id);
                     }}
                   >
                     Eliminar del carrito

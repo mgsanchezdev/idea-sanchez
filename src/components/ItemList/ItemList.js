@@ -6,8 +6,8 @@ const ItemList = ({ items = [] }) => {
   return (
     <div className="container-clothing">
       {items.map((item) => (
-        <Link key={item.id} to={`/item/${item.id}`}>
-          <Item key={item.id} item={item} />
+        <Link key={item[0].id} to={`/item/${item[0].id}`}>
+          <Item key={item[0].id} item={item} />
         </Link>
       ))}
     </div>

@@ -6,7 +6,7 @@ const CartProvider = ({ children }) => {
 
   const addItem = (item, quantity) => {
     const itemIndex = cart.findIndex(
-      (itemProd) => itemProd.product.id === item.id
+      (itemProd) => itemProd.product[0].id === item[0].id
     );
 
     if (itemIndex === -1) {
@@ -27,7 +27,7 @@ const CartProvider = ({ children }) => {
   };
 
   const removeItem = (itemId) => {
-    const newCart = cart.filter((element) => element.product.id !== itemId);
+    const newCart = cart.filter((element) => element.product[0].id !== itemId);
 
     setCart(newCart);
   };
@@ -37,7 +37,7 @@ const CartProvider = ({ children }) => {
   };
 
   const isInCart = (id) => {
-    const findItem = cart.find((element) => element.product.id === id);
+    const findItem = cart.find((element) => element.product[0].id === id);
     return findItem ? true : false;
   };
 
@@ -49,7 +49,7 @@ const CartProvider = ({ children }) => {
 
   const cartTotalPrice = () => {
     return cart.reduce((acumulador, item) => {
-      return acumulador + item.quantityProduct * item.product.price;
+      return acumulador + item.quantityProduct * item.product[0].price;
     }, 0);
   };
 

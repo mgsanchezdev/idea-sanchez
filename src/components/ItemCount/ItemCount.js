@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Button } from 'react-bootstrap';
+import { CartContext } from '../../context/CartContext';
 import './ItemCount.css';
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial, onAdd, item }) => {
   const [count, setCount] = useState(parseInt(initial));
+  const { addItem } = useContext(CartContext);
 
   useEffect(() => {
     setCount(parseInt(initial));
@@ -19,7 +21,9 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   const onAddHandle = () => {
     onAdd(count);
+    addItem(item, count);
   };
+
   return (
     <div className="container-count-btn">
       <div className="container-count">
