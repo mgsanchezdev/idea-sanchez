@@ -1,6 +1,6 @@
 # App creada con Create React App
 
-## Detalles:
+## Detalles del proyecto:
 
 El proyecto es la realización de un E-commerce (esta en construcción) donde al inglesar al mismo se muestran todos los productos disponibles y se puede acceder al detalle del mismo haciendo click en cada producto.
 Luego cuenta con un menu donde se pueden acceder a cada una de las categorias de los productos.
